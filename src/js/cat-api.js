@@ -8,7 +8,7 @@ const BASE_URL = `https://api.thecatapi.com/v1`;
 export function fetchBreeds() {
   return axios.get(`${BASE_URL}/breeds`).then(resp => {
     if (resp.status !== 200) {
-      throw new Error(resp.statusText);
+      return;
     }
     return resp.data;
   });
@@ -19,7 +19,7 @@ export function fetchCatByBreed(breedId) {
     .get(`${BASE_URL}/images/search?breed_ids=${breedId}`)
     .then(resp => {
       if (resp.status !== 200) {
-        throw new Error(resp.statusText);
+        return;
       }
       return resp.data[0];
     });
