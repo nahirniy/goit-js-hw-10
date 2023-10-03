@@ -33,7 +33,7 @@ fetchBreeds()
   .catch(err => console.log(err));
 
 function onChange(e) {
-  targetId = e.target.value;
+  const targetId = e.target.value;
   fetchCatByBreed(targetId)
     .then(({ breeds, url }) => createMarkup(breeds[0], url))
     .catch(err => console.log(err));
