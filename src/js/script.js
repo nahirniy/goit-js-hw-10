@@ -8,6 +8,8 @@ const selectCat = document.querySelector('.breed-select');
 const boxOfCat = document.querySelector('.cat-info');
 const error = document.querySelector('.error');
 const loader = document.querySelector('.loader');
+const defaultOption = document.querySelector('.default-option');
+defaultOption.setAttribute('disabled', 'true');
 
 function createOption(information) {
   const arrayOption = information
