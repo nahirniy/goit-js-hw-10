@@ -44,6 +44,7 @@ fetchBreeds()
   });
 
 function onChange(e) {
+  error.style.display = 'none';
   loader.style.display = 'block';
   boxOfCat.style.display = 'none';
   const targetId = e.target.value;
